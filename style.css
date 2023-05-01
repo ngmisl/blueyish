@@ -1,0 +1,138 @@
+/* Import JetBrains Mono Nerd Font */
+@import url("https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf");
+
+/* Define Bluey and Bingo color palette */
+:root {
+  --bluey-darker: #09233b;
+  --bluey-dark: #0b3d91;
+  --bluey-medium: #1e88e5;
+  --bluey-light: #6ab7ff;
+  --bluey-lightest: #bbdefb;
+  --bluey-text: #e3f2fd;
+  --bluey-accent: #ffa726;
+
+  --bingo-dark: #b36c66;
+  --bingo-medium: #e4897b;
+  --bingo-light: #f4afa6;
+}
+
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  background-color: var(--bluey-darker);
+  color: var(--bluey-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+a {
+  color: var(--bingo-medium);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--bluey-medium);
+}
+
+button {
+  background-color: var(--bluey-medium);
+  border: none;
+  color: var(--bluey-text);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--bluey-light);
+}
+
+input,
+textarea,
+select {
+  background-color: var(--bluey-lightest);
+  color: var(--bluey-dark);
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: var(--bluey-light);
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bluey-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bluey-medium);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bluey-light);
+}
+
+/* Responsive layout styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  h1,
+  h2 {
+    font-size: 24px;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  label {
+    flex-basis: 100%;
+  }
+}
